@@ -9,3 +9,17 @@ Once the web server is running, from the device you want to identify the externa
 
 ## Why bother with this?
 Some devices are not able to easily render a web page over even return the result of a GET request, and that makes it difficult to identify the device's external IP.  This is especially true when proxies or tunnels are involved.
+
+## Quick Start
+```curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh  | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+nvm install node
+nvm use node
+apt update
+apt install git
+git clone https://github.com/triwebb1/echo-req-ip.git
+cd echo-req-ip
+node index.js
+```
